@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Border Radius Previewer</title>
+        <meta charset='UTF-8'/>
+        <meta http-equiv="Content-Language" content="pt-br">
+        <!-- IE -->
+        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+        <!-- other browsers -->
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="index.css">        
+    </head>
+    <body>
+        <main>
+            <div class="center">
+                <div class="title">
+                    <h1>Border Previewer</h1>   
+                </div>
+                
+                <div id="box-bordered" class="box"></div>
+                
+                <div class="center-items">
+                    <form id="border-form">                        
+                        <fieldset class="line1c1">
+                            <legend>
+                                <i>Basic</i>
+                            </legend>
+                            <!-- width -->
+                            <div class="line">
+                                <label for="border-width">Border Width:</label>
+                                <input type="text" name="border-width" id="border-width" placeholder="border-width" onchange="changeStyleBorder(this, 'border-width')">
+                            </div>
+                            
+                            <!-- style -->
+                            <div class="line">
+                                <label for="border-style">Border Style:</label>
+                                <input type="text" name="border-style" id="border-style" placeholder="border-style" onchange="changeStyleBorder(this, 'border-style')">
+                            </div>
+                            
+                            <!-- color -->
+                            <div class="line">
+                                <label for="border-color">Border Color:</label>
+                                <input type="text" name="border-color" id="border-color" placeholder="border-color" onchange="changeStyleBorder(this, 'border-color')">
+                            </div>
+                        </fieldset>
+                        
+                        <fieldset class="line1c2">
+                            <legend>
+                                <i>Radius</i>
+                            </legend>
+                            <!-- radius -->
+                            <div class="line">
+                                <label for="border-radius">Radius:</label>
+                                <input type="text" name="border-radius" id="border-radius" placeholder="border-radius" onchange="changeStyleBorder(this, 'border-radius')">
+                            </div>
+                        </fieldset>
+                        
+                        <fieldset class="line2c1">
+                            <legend>
+                                <i>Top</i>
+                            </legend>
+                            <!-- top left -->
+                            <div class="line">
+                                <label for="borderTopLeft">Top Left Radius</label>
+                                <input type="text" name="borderTopLeft" id="borderTopLeft" placeholder="border-top-left-radius" onchange="changeStyleBorder(this,'border-top-left-radius')">
+                            </div>
+                            <!-- top Right -->
+                            <div class="line">
+                                <label for="borderTopRight">Top Right Radius</label>
+                                <input type="text" name="borderTopRight" id="borderTopRight" placeholder="border-top-right-radius"  onchange="changeStyleBorder(this,'border-top-right-radius')">
+                            </div>
+                            <!-- top Style -->
+                            <div class="line">
+                                <label for="borderTopStyle">Top Style</label>
+                                <input type="text" name="borderTopStyle" id="borderTopStyle" placeholder="border-top-style" onchange="changeStyleBorder(this,'border-top-style')">
+                            </div>
+                            <!-- top Color -->
+                            <div class="line">
+                                <label for="borderTopColor">Top Color</label>
+                                <input type="text" name="borderTopColor" id="borderTopColor" placeholder="border-top-color"  onchange="changeStyleBorder(this,'border-top-color')">
+                            </div>
+                            <!-- top Width -->
+                            <div class="line">
+                                <label for="borderTopWidth">Top Width</label>
+                                <input type="text" name="borderTopWidth" id="borderTopWidth" placeholder="border-top-width"   onchange="changeStyleBorder(this,'border-top-width')">
+                            </div>
+                        </fieldset>
+                        
+                        <fieldset class="line2c2">
+                            <legend>
+                                <i>Bottom</i>
+                            </legend>
+                            <!-- bottom right -->
+                            <div class="line">
+                                <label for="borderBottomRight">Bottom Right Radius</label>
+                                <input type="text" name="borderBottomRight" id="borderBottomRight" placeholder="border-bottom-right-radius"  onchange="changeStyleBorder(this,'border-bottom-right-radius')">
+                            </div>
+                            <!-- bottom left -->
+                            <div class="line">
+                                <label for="borderBottomLeft">Bottom Left Radius</label>
+                                <input type="text" name="borderBottomLeft" id="borderBottomLeft" placeholder="border-bottom-left-radius" onchange="changeStyleBorder(this,'border-bottom-left-radius')">
+                            </div>
+                            <!-- bottom Style -->
+                            <div class="line">
+                                <label for="borderBottomStyle">Bottom Style</label>
+                                <input type="text" name="borderBottomStyle" id="borderBottomStyle" placeholder="border-bottom-style" onchange="changeStyleBorder(this,'border-bottom-style')">
+                            </div>
+                            <!-- bottom Color -->
+                            <div class="line">
+                                <label for="borderBottomColor">Bottom Color</label>
+                                <input type="text" name="borderBottomColor" id="borderBottomColor" placeholder="border-bottom-color" onchange="changeStyleBorder(this,'border-bottom-color')">
+                            </div>
+                            <!-- bottom Width -->
+                            <div class="line">
+                                <label for="borderBottomWidth">Bottom Width</label>
+                                <input type="text" name="borderBottomWidth" id="borderBottomWidth" placeholder="border-bottom-width" onchange="changeStyleBorder(this,'border-bottom-width')">
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="line3c1">
+                            <legend>
+                                <i>Left</i>
+                            </legend>
+                            <!-- left Style -->
+                            <div class="line">
+                                <label for="borderLeftStyle">Left Style</label>
+                                <input type="text" name="borderLeftStyle" id="borderLeftStyle" placeholder="border-left-style" onchange="changeStyleBorder(this,'border-left-style')">
+                            </div>
+                            <!-- left Color -->
+                            <div class="line">
+                                <label for="borderLeftColor">Left Color</label>
+                                <input type="text" name="borderLeftColor" id="borderLeftColor" placeholder="border-left-color" onchange="changeStyleBorder(this,'border-left-color')">
+                            </div>
+                            <!-- left Width -->
+                            <div class="line">
+                                <label for="borderLeftWidth">Left Width</label>
+                                <input type="text" name="borderLeftWidth" id="borderLeftWidth" placeholder="border-left-width"
+                                onchange="changeStyleBorder(this,'border-left-width')">
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="line3c2">
+                            <legend>
+                                <i>Right</i>
+                            </legend>
+                            <!-- right Style -->
+                            <div class="line">
+                                <label for="borderRightStyle">Right Style</label>
+                                <input type="text" name="borderRightStyle" id="borderRightStyle" placeholder="border-right-style" onchange="changeStyleBorder(this,'border-right-style')">
+                            </div>
+                             <!-- left Color -->
+                             <div class="line">
+                                <label for="borderRightColor">Right Color</label>
+                                <input type="text" name="borderRightColor" id="borderRightColor" placeholder="border-right-color" onchange="changeStyleBorder(this,'border-right-color')">
+                            </div>
+                            <!-- left Width -->
+                            <div class="line">
+                                <label for="borderRightWidth">Right Width</label>
+                                <input type="text" name="borderRightWidth" id="borderRightWidth" placeholder="border-right-width" onchange="changeStyleBorder(this,'border-right-width')">
+                            </div>
+                        </fieldset>
+                        <div class="line4">
+                            <button class="ugly-btn" onclick="copyStyle(event)"> Copy style </button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </main>
+        <script>
+            var styleCss = {};
+            function changeStyleBorder(el, prop){
+                let value = el.value ? el.value : 'inherit';
+                var boxBorder = document.getElementById('box-bordered');
+                if(boxBorder){
+                    boxBorder.style[prop] = value;
+                    styleCss[prop] = value;
+                }          
+                
+            }
+            
+            function copyStyle(e){
+                e.preventDefault();
+                
+                //
+                let sCss = '';
+                let keyValues = Object.entries(styleCss);
+                keyValues.forEach(item => {
+                    sCss = `${sCss} ${item[0]}:${item[1]};`;
+                })
+                
+                //
+                const inputStyle = document.createElement('textarea');
+                inputStyle.value = sCss;
+                document.body.appendChild(inputStyle);
+                inputStyle.select();
+                document.execCommand("copy");
+                document.body.removeChild(inputStyle);
+            }
+        </script>
+    </body>
+</html>
